@@ -33,7 +33,9 @@ function StoreItem({ id, name, price, imgUrl }: StoreItemProps) {
         </Card.Title>
         <div className="mt-auto">
           {quantity === 0 ? (
-            <Button className="w-100" onClick={() => increaseItemQuantity(id)} >+ Add To Cart</Button>
+            <Button className="w-100" onClick={() => increaseItemQuantity(id)}>
+              + Add To Cart
+            </Button>
           ) : (
             <div
               className="d-flex align-items-center flex-column"
@@ -49,7 +51,11 @@ function StoreItem({ id, name, price, imgUrl }: StoreItemProps) {
                 </div>
                 <Button onClick={() => increaseItemQuantity(id)}>+</Button>
               </div>
-              <Button variant="danger" size="sm" onClick={() => removeFromCart(id)}>
+              <Button
+                variant="danger"
+                size="sm"
+                onClick={() => removeFromCart(id)}
+              >
                 Remove
               </Button>
             </div>
